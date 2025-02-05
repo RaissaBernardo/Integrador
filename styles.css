@@ -12,6 +12,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 header img {
@@ -168,19 +169,19 @@ h1 {
     margin-bottom: 15px;
 }
 
-#regras{
+#regras {
     animation: 0.6s slide-up;
 }
 
-#contatos{
+#contatos {
     animation: 0.6s slide-up;
 }
 
-#duvidas{
+#duvidas {
     animation: 0.6s slide-up;
 }
 
-#apoio{
+#apoio {
     animation: 0.6s slide-up;
 }
 
@@ -193,9 +194,9 @@ h1 {
       margin-top: 0%;
       height: 100%;
     }
-  }
+}
 
-  .imgprincipal {
+.imgprincipal {
     height: 50vh;
     background: linear-gradient(rgba(248, 248, 248, 0.8), rgba(173, 41, 41, 0.8)),
                 url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
@@ -218,6 +219,7 @@ h1 {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
+
 /*duvidas*/
 /* Estilo para o container principal */
 .duvidas-container {
@@ -263,10 +265,12 @@ h1 {
     font-size: 1rem;
     margin-top: 0.5rem;
 }
+
 /* Adicionando animação ao aparecer */
 .duvida-item {
     animation: fadeIn 0.5s ease-in-out;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -275,5 +279,67 @@ h1 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header img {
+        width: 8rem;
+    }
+
+    .headerButtons {
+        font-size: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .carrossel-container {
+        max-width: 100%;
+    }
+
+    .imgprincipal {
+        height: 40vh;
+    }
+
+    #informacao {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header div {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .headerButtons {
+        font-size: 0.9rem;
+    }
+
+    .menu button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    #map {
+        height: 50vh;
     }
 }
