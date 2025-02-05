@@ -7,9 +7,11 @@
     <title>Contatos | SENAI São Carlos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/script.js">
     <style>
         :root {
-            --senai-blue: #0055A4;
+            --senai-blue: #d41508;
             --accent-yellow: #FFD100;
             --text-dark: #2D2D2D;
             --text-light: #FFFFFF;
@@ -340,23 +342,15 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="#" class="logo-link">
-                <img src="imagens/logoSenaiWhite.png" alt="SENAI São Carlos" class="logo">
-            </a>
-
-            <button class="nav-toggle" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <ul class="nav-list">
-                <li><a href="contato.html" class="nav-link">Contato</a></li>
-                <li><a href="duvidas.html" class="nav-link">Dúvidas</a></li>
-                <li><a href="apoio.html" class="nav-link">Apoio</a></li>
-                <li><a href="regras.html" class="nav-link">Regras Básicas</a></li>
-            </ul>
-        </nav>
+    <header>
+        <img src="imagens/logoSenaiWhite.png" alt="">
+        <div>
+            <p onclick="mostrarInformacoes('mapa')" class="headerButtons">Mapa</p>
+            <p><a href="regras.html" class="headerButtons">Regras</a></p>
+            <p> <a href="contato.html" class="headerButtons">Contatos</a></p>
+            <p onclick="mostrarInformacoes('duvidas')" class="headerButtons">Dúvidas</p>
+            <p><a href="old.html" class="headerButtons">Informações Importantes</a></p>
+        </div>
     </header>
 
     <main>
