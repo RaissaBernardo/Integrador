@@ -1,5 +1,23 @@
 let map;
 
+function salvarEIr(tipo) {
+    console.log("Salvando informação:", tipo); // Debug para ver se está salvando
+    localStorage.setItem('infoParaMostrar', tipo);
+    window.location.href = "index.html"; // Certifique-se de que o caminho está correto
+}
+
+// Quando a página carrega, verifica se há algo salvo e chama a função
+document.addEventListener("DOMContentLoaded", function () {
+    let info = localStorage.getItem('infoParaMostrar');
+    console.log("Verificando informação salva:", info); // Debug para checar se o dado existe
+
+    if (info) {
+        mostrarInformacoes(info); // Chama a função correta
+        localStorage.removeItem('infoParaMostrar'); // Remove após o uso
+    }
+});
+
+
 // Função para mostrar o submenu do mapa
 function mostrarSubmenu(tipo) {
     if (tipo === 'mapa') {

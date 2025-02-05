@@ -345,10 +345,10 @@
     <header>
         <img src="imagens/logoSenaiWhite.png" alt="">
         <div>
-            <p onclick="mostrarInformacoes('mapa')" class="headerButtons">Mapa</p>
+            <a onclick="salvarEIr('mapa')" class="headerButtons">Mapa</a>
             <p><a href="regras.html" class="headerButtons">Regras</a></p>
             <p> <a href="contato.html" class="headerButtons">Contatos</a></p>
-            <p onclick="mostrarInformacoes('duvidas')" class="headerButtons">Dúvidas</p>
+            <a onclick="salvarEIr('duvidas')" class="headerButtons">Dúvidas</a>
             <p><a href="old.html" class="headerButtons">Informações Importantes</a></p>
         </div>
     </header>
@@ -424,6 +424,7 @@
         </div>
     </footer>
 
+    <script src="/script.js"></script>
     <script>
         // Menu Mobile
         const navToggle = document.querySelector('.nav-toggle');
